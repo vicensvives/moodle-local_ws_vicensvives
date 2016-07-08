@@ -14,12 +14,4 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/**
- * Web service get LTI grade
- * @package   localwsvicensvives
- * @copyright 2014 CV&A
- * @author    Daniel Ureña
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
-
 $string['pluginname'] = 'Web service Vicens Vives';

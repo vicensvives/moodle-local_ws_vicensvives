@@ -1,4 +1,6 @@
 <?php
+// This file is part of Moodle - http://moodle.org/
+//
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
@@ -11,15 +13,6 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
-/**
- * Web service get LTI grade
- * @package   local_wsvicensvives
- * @copyright 2014 CV&A
- * @author    Daniel Ureña
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
-require_once($CFG->libdir . "/externallib.php");
 
 class local_wsvicensvives_external extends external_api {
 
@@ -124,7 +117,7 @@ class local_wsvicensvives_external extends external_api {
                 $gradeitem->iteminstance = $ltiinstance->id;
                 $gradeitem->itemnumber = 0;
                 $gradeitem->idnumber = $ltiinstance->idnumber;
-                $gradeitem->sortorder = $gradeitem->sortorder+1;
+                $gradeitem->sortorder = $gradeitem->sortorder + 1;
                 $gradeitem->timecreated = time();
                 $gradeitem->timemodified = time();
                 $gradeitem->id = $DB->insert_record('grade_items', $gradeitem);
@@ -146,7 +139,7 @@ class local_wsvicensvives_external extends external_api {
             $gradeobj->excluded = 0;
             $gradeobj->feedback = '';
             $gradeobj->feedbackformat = 0;
-            $gradeobj->information ='';
+            $gradeobj->information = '';
             $gradeobj->informationformat = '';
             $gradeobj->timecreated = time();
         }
